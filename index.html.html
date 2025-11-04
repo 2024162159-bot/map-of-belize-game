@@ -1,0 +1,52 @@
+
+<html>
+<head>
+  <title>Belize Map Districts</title>
+  <style>
+    img {
+      width: 400px;
+      height: 500px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Default map -->
+  <img id="belizeMap" src="blank map.png" alt="Belize Map">
+
+  <div class="buttons">
+    <button onclick="changeMap('corozal.png')">Corozal</button>
+    <button onclick="changeMap('orange walk.png')">Orange Walk</button>
+    <button onclick="changeMap('belize.png')">Belize</button>
+    <button onclick="changeMap('cayo.png')">Cayo</button>
+    <button onclick="changeMap('stann creek.png')">Stann Creek</button>
+    <button onclick="changeMap('toledo.png')">Toledo</button>
+    <button onclick="resetMap()">Reset</button>
+  </div>
+
+  <script>
+    // Function to change the map image
+    function changeMap(imageName) {
+      document.getElementById("belizeMap").src = imageName;
+    }
+
+    // Optional: Reset map to blank
+    function resetMap() {
+      document.getElementById("belizeMap").src = "blank map.png";
+    }
+  </script>
+</body>
+</html>
